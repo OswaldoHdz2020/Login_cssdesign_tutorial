@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&family=The+Nautigal:wght@400;700&display=swap');
+
+html{
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan', sans-serif;
+}
+body{
+    background: linear-gradient(#16222A, #3A6073);
+    text-align: center;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 15px 15px 30px 0px rgba(0, 0, 0, .75);
+    border-radius: 10px;
+}
+.container h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.container .login-box{
+    position: relative;
+}
+.container .login-box input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    outline: none;
+    background: transparent;
+}
+.container .login-box .enter-text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.container .login-box input:focus ~ .enter-text,
+.container .login-box input:valid ~ .enter-text{
+    top: -20px;
+    left: 0;
+    color: #8BD1CB;
+    font-size: 12px;
+}
+.login-remember{
+    text-align: left;
+    color: #fff;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.checkbox span{
+    font-size: 14px;
+    margin-top: auto;
+}
+.checkbox:hover .checkbox-check{
+    background: #8BD1CB27;
+}
+.checkbox-input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.checkbox-input:checked+.checkbox-check{
+    background: #8BD1CB;
+    stroke-dashoffset: 0;
+}
+.checkbox-check{
+    width: 16px;
+    height: 16px;
+    border: 0.2rem solid #8BD1CB;
+    background: #16222A;
+    stroke: #16222A;
+    stroke-dasharray: 25;
+    stroke-dashoffset: 25;
+    stroke-linecap: round;
+    stroke-width: 0.2rem;
+    margin-right: 8px;
+    border-radius: 0.2rem;
+    fill: none;
+    transition: background 0.4s, stroke-dashoffset 0.6s;
+}
+.container form a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #8BD1CB;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+.container a:hover{
+    background: #8BD1CB;
+    color: #16222A;
+    box-shadow: 0 0 3px #8BD1CB,
+        0 0 6px #8BD1CB,
+        0 0 9px #8BD1CB,
+        0 0 12px #8BD1CB;
+}
+.container a span{
+    position: absolute;
+    display: block;
+}
+.container a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,  #8BD1CB);
+    animation: btn-anim1 1s linear infinite;
+}
+@keyframes btn-anim1 {
+    0%{
+        left: -100%;
+    }
+    50%,
+    100%{
+        left: 100%;
+    }
+}
+.container a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #8BD1CB);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s;
+}
+@keyframes btn-anim2 {
+    0%{
+        top: -100%;
+    }
+    50%,
+    100%{
+        top: 100%;
+    }
+}
+.container a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #8BD1CB);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s;
+}
+@keyframes btn-anim3 {
+    0%{
+        right: -100%;
+    }
+    50%,
+    100%{
+        right: 100%;
+    }
+}
+.container a span:nth-child(4) {
+    top: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #8BD1CB);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s;
+}
+@keyframes btn-anim4 {
+    0%{
+        bottom: -100%;
+    }
+    50%,
+    100%{
+        bottom: 100%;
+    }
+}
+
